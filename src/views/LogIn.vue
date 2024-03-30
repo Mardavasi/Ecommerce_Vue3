@@ -2,7 +2,7 @@
     <div class="page-log-in">
         <div class="columns">
             <div class="column is-4 is-offset-4">
-                <h1 class="title">Log in</h1>
+                <h1 class="title">Identificate</h1>
 
                 <form @submit.prevent="submitForm">
                     <div class="field">
@@ -51,7 +51,7 @@ export default {
         }
     },
     mounted() {
-        document.title = 'Log In | Djackets'
+        document.title = 'Identificate| CincoMenos'
     },
     methods: {
         async submitForm() {
