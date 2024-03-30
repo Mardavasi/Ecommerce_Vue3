@@ -2,25 +2,25 @@
   <div class="page-sign-up">
     <div class="columns">
       <div class="column is-4 is-offset-4">
-        <h1 class="title">Sign up</h1>
+        <h1 class="title">Registrate</h1>
 
         <form @submit.prevent="submitForm">
           <div class="field">
-            <label>Username</label>
+            <label>Nombre de Usuario</label>
             <div class="control">
               <input type="text" class="input" v-model="username" />
             </div>
           </div>
 
           <div class="field">
-            <label>Password</label>
+            <label>contrasena</label>
             <div class="control">
               <input type="password" class="input" v-model="password" />
             </div>
           </div>
 
           <div class="field">
-            <label>Repeat password</label>
+            <label>repetir contrasena</label>
             <div class="control">
               <input type="password" class="input" v-model="password2" />
             </div>
@@ -32,13 +32,13 @@
 
           <div class="field">
             <div class="control">
-              <button class="button is-dark">Sign up</button>
+              <button class="button is-dark">Registrar</button>
             </div>
           </div>
 
           <hr />
 
-          Or <router-link to="/log-in">click here</router-link> to log in!
+          O <router-link to="/log-in">click Aqui</router-link> Para Identificarte!
         </form>
       </div>
     </div>
@@ -63,15 +63,15 @@ export default {
       this.errors = [];
 
       if (this.username === "") {
-        this.errors.push("The username is missing");
+        this.errors.push("Falta el nombre de usuario");
       }
 
       if (this.password === "") {
-        this.errors.push("The password is too short");
+        this.errors.push("la contrasena no puede estar vacia");
       }
 
       if (this.password !== this.password2) {
-        this.errors.push("The passwords doesn't match");
+        this.errors.push("Las contrasenas no coinciden");
       }
 
       if (!this.errors.length) {
